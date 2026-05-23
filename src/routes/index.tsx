@@ -7,6 +7,7 @@ import interiorImg from "@/assets/club-interior.jpg";
 import cafeImg from "@/assets/cafe-area.jpg";
 import cueImg from "@/assets/cue-action.jpg";
 import { aboutGalleryImages } from "@/lib/about-gallery";
+import gallery07Img from "@/assets/gallery/gallery-07.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -155,7 +156,7 @@ function Home() {
               className="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
           </div>
           <div className="overflow-hidden rounded-2xl group">
-            <img src={aboutGalleryImages[0] ?? cueImg} alt="Cue stick striking a white ball" loading="lazy" width={1280} height={960}
+            <img src={gallery07Img} alt="Club & tables — photo 7" loading="lazy" width={1280} height={960}
               className="w-full h-64 object-cover transition duration-700 group-hover:scale-105" />
           </div>
           <div className="overflow-hidden rounded-2xl group">
