@@ -4,10 +4,11 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "dev": "vite --config vite.static.config.ts",
+    "build": "vite build --config vite.static.config.ts",
+    "build:dev": "vite build --mode development --config vite.static.config.ts",
+    "build:ssr": "vite build",
+    "preview": "vite preview --config vite.static.config.ts",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

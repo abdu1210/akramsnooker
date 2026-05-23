@@ -1,4 +1,4 @@
-const galleryModules = import.meta.glob<string>("@/assets/gallery/*.png", {
+const galleryModules = import.meta.glob<string>("../assets/gallery/*.png", {
   eager: true,
   import: "default",
 });

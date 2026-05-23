@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
+import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { CheckCircle2, MessageCircle, Loader2 } from "lucide-react";
-import { submitBooking } from "@/lib/booking.functions";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -46,7 +45,6 @@ function buildSlots(): string[] {
 
 function Book() {
   const slots = useMemo(buildSlots, []);
-  const submit = useServerFn(submitBooking);
 
   const [name, setName] = useState("");
   const [gameType, setGameType] = useState<"snooker" | "pool">("snooker");
@@ -62,28 +60,16 @@ function Book() {
       toast.error("Please enter your name");
       return;
     }
+
     setLoading(true);
-    try {
-      const res = await submit({
-        data: {
-          name: name.trim(),
-          game_type: gameType,
-          time_slot: time,
-          target_whatsapp: target,
-          customer_phone: phone.trim(),
-        },
-      });
-      setDone({ whatsappSent: res.whatsappSent });
-      if (res.whatsappSent) {
-        toast.success("Booking sent! We'll see you soon.");
-      } else {
-        toast.success("Booking received — we'll confirm shortly.");
-      }
-    } catch (err) {
-      toast.error((err as Error).message || "Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+    const waText = encodeURIComponent(
+      `Hi Akram Snooker! I just booked a ${gameType} table for ${time}. Name: ${name.trim()}${phone.trim() ? `, Phone: ${phone.trim()}` : ""}`,
+    );
+    const waNum = target.replace("+", "");
+    window.open(`https://wa.me/${waNum}?text=${waText}`, "_blank");
+    setDone({ whatsappSent: true });
+    toast.success("WhatsApp booking opened. Send the message to complete your reservation.");
+    setLoading(false);
   }
 
   if (done) {
