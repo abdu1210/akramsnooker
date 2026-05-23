@@ -90,6 +90,9 @@ function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <HeadContent />
+      {/* Google tag (gtag.js) - AW-18184490786 */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18184490786"></script>
+      <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18184490786');` }} />
       {children}
     </>
   );
