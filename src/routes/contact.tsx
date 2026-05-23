@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle, Instagram } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -79,6 +79,20 @@ function Contact() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="p-8 rounded-2xl bg-card border border-border hover-lift md:col-span-2">
+          <Instagram className="w-8 h-8 text-[var(--color-felt-glow)]" />
+          <h2 className="mt-4 font-display text-2xl font-semibold">Instagram</h2>
+          <p className="mt-2 text-muted-foreground">Follow our latest club photos, live table action, and event updates.</p>
+          <a
+            href="https://www.instagram.com/akram_snooker/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex mt-4 items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-foreground font-medium hover:bg-accent/80 transition"
+          >
+            <Instagram className="w-4 h-4" /> @akram_snooker
+          </a>
         </div>
       </section>
 

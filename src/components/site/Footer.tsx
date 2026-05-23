@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 import { SiteLogo } from "@/components/site/SiteLogo";
 
 export function Footer() {
@@ -27,6 +27,10 @@ export function Footer() {
           <p className="flex items-center gap-2 text-muted-foreground">
             <Phone className="w-4 h-4 text-[var(--color-felt-glow)]" />
             <a href="tel:+971568812699" className="hover:text-foreground">+971 56 881 2699</a>
+          </p>
+          <p className="flex items-center gap-2 text-muted-foreground">
+            <Instagram className="w-4 h-4 text-[var(--color-felt-glow)]" />
+            <a href="https://www.instagram.com/akram_snooker/" target="_blank" rel="noreferrer" className="hover:text-foreground">@akram_snooker</a>
           </p>
           <p className="flex items-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4 text-[var(--color-felt-glow)]" />

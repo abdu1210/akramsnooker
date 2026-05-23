@@ -22,6 +22,7 @@ export function Nav() {
           <span className="font-display text-lg font-bold tracking-tight">
             AKRAM <span className="text-gradient-felt">SNOOKER</span>
           </span>
+          <span role="img" aria-label="United Arab Emirates flag" className="text-base">🇦🇪</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
