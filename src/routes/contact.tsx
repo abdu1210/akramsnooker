@@ -38,11 +38,11 @@ function Contact() {
           <MapPin className="w-8 h-8 text-[var(--color-felt-glow)]" />
           <h2 className="mt-4 font-display text-2xl font-semibold">Address</h2>
           <p className="mt-2 text-muted-foreground">
-            Al Manama Street,<br /> next to Danube Building,<br />
-            Warsan First, International City,<br /> Dubai, UAE
+            5C34+JHG - Al Manama St<br /> next to Danube Building,<br />
+            Warsan First, Dubai International City,<br /> Dubai, United Arab Emirates
           </p>
           <a
-            href="https://share.google/p2luUFGAS6wY2wHs0"
+            href="https://www.google.com/maps/place/5C34+JHG+Dubai"
             target="_blank" rel="noreferrer"
             className="inline-block mt-4 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-medium glow-felt"
           >
@@ -86,7 +86,7 @@ function Contact() {
         <div className="rounded-2xl overflow-hidden border border-border glow-felt">
           <iframe
             title="Akram Snooker location on Google Maps"
-            src="https://www.google.com/maps?q=Al+Manama+St+Warsan+First+International+City+Dubai&output=embed"
+            src="https://www.google.com/maps?q=5C34%2BJHG+Dubai+United+Arab+Emirates&output=embed"
             width="100%"
             height="420"
             loading="lazy"
